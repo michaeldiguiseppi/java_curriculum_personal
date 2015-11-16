@@ -8,11 +8,14 @@ To confirm, run `gradle -version`. The computer should display `Gradle 2.XX`.
 
 # Java Challenges
 
-While developers can choose to model their JavaScript applications after Functional programming or Object Oriented programming, Java makes that decision for you and it always chooses Object Oriented. That's why we are going to take a journey through some basic functionalities of OOP by doing stuff. By the end of this unit, you should be able to:
+While developers can choose to model their JavaScript applications after Functional programming or Object Oriented programming, Java makes that decision for you and it always chooses Object Oriented. That's why we are going to take a journey through some basic functionalities of OOP by doing stuff. 
+
+By the end of this unit, you should be able to:
+
 1. Create classes
 2. Interpret error messages
-3a. Create methods that return values 
-3b. Create methods that don't return values
+3. Create methods that return values 
+4. Create methods that don't return values
 4. Understand encapsulation
 5. Understand inheritance and how to override methods in subclasses
 6. Write simple type casting
