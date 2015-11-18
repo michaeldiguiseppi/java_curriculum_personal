@@ -12,13 +12,14 @@ While developers can choose to model their JavaScript applications after Functio
 By the end of this unit, you should be able to:
 
 1. Create classes
-2. Interpret error messages
-3. Create methods that return values 
-4. Create methods that don't return values
-4. Describe encapsulation
-5. Describe inheritance and how to override methods in subclasses
-6. Write simple type casting
-7. Write/consume interfaces
+1. Interpret error messages
+1. Create methods that return values 
+1. Create methods that don't return values
+1. Work with Arrays and HashMaps
+1. Describe encapsulation
+1. Describe inheritance and how to override methods in subclasses
+1. Write simple type casting
+1. Write/consume interfaces (Describe polymorphism/abstraction)
 
 # Java Challenges
 
