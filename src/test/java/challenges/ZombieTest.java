@@ -29,23 +29,23 @@ public class ZombieTest {
     	assertEquals("Fabio", zombie.knownHumans[3].name);
     }
 
-    @Test
-    public void search_ShouldFindYoungestHuman() {
+    // @Test
+    // public void search_ShouldFindYoungestHuman() {
 
-    	Zombie zombie = new Zombie("Runner");
+    // 	Zombie zombie = new Zombie("Runner");
 
-    	Human a = new Human("Brooks", 34);
-    	Human b = new Human("Akyuna", 21);
-    	Human c = new Human("Jeff", 36);
-    	Human d = new Human("Fabio", 28);
-    	Human e = new Human("Luke", 36);
-    	Human[] humans = {a,b,c,d,e};
+    // 	Human a = new Human("Brooks", 34);
+    // 	Human b = new Human("Akyuna", 21);
+    // 	Human c = new Human("Jeff", 36);
+    // 	Human d = new Human("Fabio", 28);
+    // 	Human e = new Human("Luke", 36);
+    // 	Human[] humans = {a,b,c,d,e};
 
-    	zombie.search(humans);
+    // 	zombie.search(humans);
 
-    	assertEquals("Akyuna", zombie.knownHumans[0].name);
+    // 	assertEquals("Akyuna", zombie.knownHumans[0].name);
 
-    }
+    // }
 
     @Test
     public void eat_ShouldReturnEmptyArray() {
@@ -90,9 +90,9 @@ public class ZombieTest {
 
     // }
 
-    @Test
-    public void recall_shouldListPleasOfVictims() {
+    // @Test
+    // public void recall_shouldListPleasOfVictims() {
     	
-    }
+    // }
 
 }

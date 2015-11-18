@@ -48,10 +48,12 @@ public class Zombie implements Person{
 		return youngestHuman.plea;
 	}
 
-	public String[] recall() {
-		
+	// public String[] recall() {
 		
 
-	}
+
+	// 	return new String[]{'not', 'working', 'yet'}
+
+	// }
 
 }
