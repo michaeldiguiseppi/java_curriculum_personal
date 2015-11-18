@@ -22,7 +22,6 @@ public class Zombie implements Person{
 	public void search(Human[] humans){
 		Human temp = null;
 
-
 		for(int i = 0; i < humans.length-1; i++){
 			for(int j = 1; j < humans.length-i; j++){
 				if(humans[j-1].age > humans[j].age){
@@ -37,16 +36,15 @@ public class Zombie implements Person{
 
 
 	public String eat(){
-		Human youngestHuman = knownHumans[0];
+		String victimPlea = this.knownHumans[0].plea;
+		System.out.println("before emptying array: " + victimPlea);
 		this.knownHumans = new Human[0];
+
 		health++;
 
-		// System.out.println(youngestHuman.plea);
-		// System.out.println(knownHumans[0].name);
+		System.out.println(victimPlea);
 
-
-		return youngestHuman.plea;
-		// return knownHumans[0];
+		return victimPlea;
 	}
 
 	// public String[] recall() {

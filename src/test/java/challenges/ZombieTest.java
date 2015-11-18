@@ -48,7 +48,7 @@ public class ZombieTest {
     }
 
     @Test
-    public void eat_ShouldReturnEmptyArray() {
+    public void eat_ShouldEmptyArrayOfHumans() {
     	Zombie zombie = new Zombie("Eater");
 
     	Human a = new Human("Brooks", 34);
@@ -72,7 +72,6 @@ public class ZombieTest {
     	zombie.search(humans);
     	zombie.eat();
 
-    	assertEquals(0, zombie.knownHumans.length);
     	assertEquals(3, zombie.health);
     }
 
@@ -85,7 +84,6 @@ public class ZombieTest {
     	Human[] humans = {a,b};
 
     	zombie.search(humans);
-    	zombie.eat();
 
     	assertEquals("Oh God, why? How did my life come to this?", zombie.eat());
 
