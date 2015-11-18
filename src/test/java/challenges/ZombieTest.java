@@ -26,26 +26,26 @@ public class ZombieTest {
 
     	zombie.search(humans);
 
-    	assertEquals("Fabio", zombie.knownHumans[3].name);
+    	assertEquals("Fabio", zombie.knownHumans[1].name);
     }
 
-    // @Test
-    // public void search_ShouldFindYoungestHuman() {
+    @Test
+    public void search_ShouldFindYoungestHuman() {
 
-    // 	Zombie zombie = new Zombie("Runner");
+    	Zombie zombie = new Zombie("Runner");
 
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human c = new Human("Jeff", 36);
-    // 	Human d = new Human("Fabio", 28);
-    // 	Human e = new Human("Luke", 36);
-    // 	Human[] humans = {a,b,c,d,e};
+    	Human a = new Human("Brooks", 34);
+    	Human b = new Human("Akyuna", 21);
+    	Human c = new Human("Jeff", 36);
+    	Human d = new Human("Fabio", 28);
+    	Human e = new Human("Luke", 36);
+    	Human[] humans = {a,b,c,d,e};
 
-    // 	zombie.search(humans);
+    	zombie.search(humans);
 
-    // 	assertEquals("Akyuna", zombie.knownHumans[0].name);
+    	assertEquals("Akyuna", zombie.knownHumans[0].name);
 
-    // }
+    }
 
     @Test
     public void eat_ShouldReturnEmptyArray() {
@@ -76,23 +76,24 @@ public class ZombieTest {
     	assertEquals(3, zombie.health);
     }
 
-    // @Test
-    // public void eat_ShouldHearVictimsPlea() {
-    // 	Zombie zombie = new Zombie("Eater", 2);
+    @Test
+    public void eat_ShouldHearVictimsPlea() {
+    	Zombie zombie = new Zombie("Eater", 2);
 
-    // 	Human a = new Human("Brooks", 34, "Help help help. Stop eating me.");
-    // 	Human b = new Human("Akyuna", 21, "Oh God, why? How did my life come to this?");
+    	Human a = new Human("Brooks", 34, "Help help help. Stop eating me.");
+    	Human b = new Human("Akyuna", 21, "Oh God, why? How did my life come to this?");
+    	Human[] humans = {a,b};
 
-    // 	zombie.search(humans);
-    // 	zombie.eat();
+    	zombie.search(humans);
+    	zombie.eat();
 
-    // 	assertEquals("Oh God, why? How did my life come to this?", zombie.eat());
+    	assertEquals("Oh God, why? How did my life come to this?", zombie.eat());
 
-    // }
+    }
 
     // @Test
     // public void recall_shouldListPleasOfVictims() {
-    	
+
     // }
 
 }
