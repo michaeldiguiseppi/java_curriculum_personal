@@ -89,9 +89,52 @@ public class ZombieTest {
 
     }
 
-    // @Test
-    // public void recall_shouldListPleasOfVictims() {
+    @Test
+    public void eat_ShouldListContentsOfStomach() {
+    	Zombie zombie = new Zombie("Chomper");
+    	
+    	Human a = new Human("Brooks", 34);
+    	Human b = new Human("Akyuna", 21);
+    	Human c = new Human("Jeff", 36);
+    	Human d = new Human("Fabio", 28);
+    	Human e = new Human("Luke", 36);
+    	Human[] humans = {a,b};
 
-    // }
+    	zombie.search(humans);
+    	zombie.eat();
+
+    	Human[] eatenVictims = zombie.stomachContents.get(zombie.name);
+    	System.out.println("eaten one victim: " + eatenVictims.length);
+
+    	assertEquals("Akyuna", eatenVictims[0].name);
+
+    	Human[] humansRound2 = {c,d};
+    	zombie.search(humansRound2);
+    	// System.out.println(eatenVictims.length);
+    	zombie.eat();
+    	// System.out.println(eatenVictims.length);
+
+    	eatenVictims = zombie.stomachContents.get(zombie.name);
+    	System.out.println("eaten two victims: " + eatenVictims.length);
+    	
+    	assertEquals("Fabio", eatenVictims[0].name);
+
+    }
+
+    @Test
+    public void isDead_ShouldClarifyIfHumanHasBeenEaten() {
+    	Zombie zombie = new Zombie("Chomper");
+    	
+    	Human a = new Human("Brooks", 34);
+    	Human b = new Human("Akyuna", 21);
+    	Human c = new Human("Jeff", 36);
+    	Human[] humans = {a,b,c};
+
+    	zombie.search(humans);
+    	zombie.eat();
+
+    	assertEquals(true, b.isDead());
+
+    }
 
 }
