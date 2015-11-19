@@ -90,7 +90,7 @@ public class ZombieTest {
     }
 
     @Test
-    public void eat_ShouldListContentsOfStomach() {
+    public void eat_ShouldCollectContentsOfStomach() {
     	Zombie zombie = new Zombie("Chomper");
     	
     	Human a = new Human("Brooks", 34);
@@ -117,7 +117,7 @@ public class ZombieTest {
     	eatenVictims = zombie.stomachContents.get(zombie.name);
     	System.out.println("eaten two victims: " + eatenVictims.length);
     	
-    	assertEquals("Fabio", eatenVictims[0].name);
+    	assertEquals("Fabio", eatenVictims[1].name);
 
     }
 

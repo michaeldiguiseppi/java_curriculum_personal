@@ -7,7 +7,7 @@ public class Zombie implements Person{
 	int health;
 	Human[] knownHumans;
 	String[] victimPleas;
-	HashMap<String, Human[]> stomachContents;
+	HashMap<String, Human[]> stomachContents = new HashMap<String, Human[]>();;
 
 	// Constructors
 	public Zombie(String name){
@@ -49,9 +49,6 @@ public class Zombie implements Person{
 
 		// victim is now in the stomach of the zombie
 		// gross
-		this.stomachContents = new HashMap<String, Human[]>();
-		// stomachContents.put(this.name, new Human[]{this.knownHumans[0]});
-
 		Human[] eatenVictims = this.stomachContents.get(this.name);
 
 		if(eatenVictims == null){
@@ -60,12 +57,9 @@ public class Zombie implements Person{
 			Human[] cpArr = new Human[eatenVictims.length*2];
 			for(int i = 0; i < eatenVictims.length; i++){
 				cpArr[i] = eatenVictims[i];
-				System.out.println("info being copied over: " + cpArr[i].name);
 			}
-			cpArr[eatenVictims.length+1] = this.knownHumans[0];
-			System.out.println("human being eaten: " + this.knownHumans[0].name);
+			cpArr[eatenVictims.length] = this.knownHumans[0];
 			stomachContents.put(this.name, cpArr);
-			System.out.println("zombie name: " + this.name);
 		}
 
 		System.out.println(stomachContents.get(this.name).length);
