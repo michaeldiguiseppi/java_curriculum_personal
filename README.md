@@ -21,18 +21,24 @@ By the end of this unit, you should be able to:
 1. Write simple type casting
 1. Write/consume interfaces (Describe polymorphism/abstraction)
 
-# Java Challenges
-## Zombie Apocalypse
+# Zombie Apocalypse
 
 ![Zombie Apocalypse](http://vignette2.wikia.nocookie.net/zombie/images/4/41/Zombiegroup02.jpg/revision/latest?cb=20100111201702)
 
 My worst nightmare has come true-- Zombies are taking over the world! Turns out, Galvanize students are the only ones who can help. Good thing we've got a bunch of those.
 
-*Your task:* Write a program that fulfills some tests so we can keep track of the Zombies, identify their victims, and learn Java doing it! It's the only way we can end the carnage and reestablish peace. Get started!
+**Your task:** Write a program that fulfills several tests developed by the CDC so we can keep track of the Zombies, identify their victims, and learn Java doing it! It's the only way we can end the carnage and reestablish peace. Get going!
+
+<!-- ### CDC's Instructions
+
+Start by forking and cloning this repo.
+
+You should see a folder called `src`, which contains a `main` folder and a `test` folder. The former contains the code you will be implementing and the former contains the test file you'll be checking your work against. Explore both folders. 
+
+Let's go over the ZombieTest.java file first. You'll see that each test starts with an `@Test` annotation. Each test is a method whose name will e -->
 
 
-
-## Setup
+### Running the Tests
 
 Make sure you have gradle installed:
 
