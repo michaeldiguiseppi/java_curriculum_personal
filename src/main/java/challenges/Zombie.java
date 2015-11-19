@@ -7,7 +7,7 @@ public class Zombie implements Person{
 	int health;
 	Human[] knownHumans;
 	String[] victimPleas;
-	HashMap<String, Human[]> stomachContents = new HashMap<String, Human[]>();;
+	HashMap<String, Human[]> stomachContents = new HashMap<String, Human[]>();
 
 	// Constructors
 	public Zombie(String name){

@@ -26,7 +26,11 @@ By the end of this unit, you should be able to:
 
 ![Zombie Apocalypse](http://vignette2.wikia.nocookie.net/zombie/images/4/41/Zombiegroup02.jpg/revision/latest?cb=20100111201702)
 
-<!-- OO and algorithm challenges in Java. -->
+My worst nightmare has come true-- Zombies are taking over the world! Turns out, Galvanize students are the only ones who can help. Good thing we've got a bunch of those.
+
+*Your task:* Write a program that fulfills some tests so we can keep track of the Zombies, identify their victims, and learn Java doing it! It's the only way we can end the carnage and reestablish peace. Get started!
+
+
 
 ## Setup
 
@@ -51,11 +55,12 @@ Run all tests with:
 gradle test
 ```
 
+<!-- 
 Run a single test with:
 
 ```
 gradle test --tests challenges.MathServiceTest
-```
+``` -->
 
 ## Resources
 

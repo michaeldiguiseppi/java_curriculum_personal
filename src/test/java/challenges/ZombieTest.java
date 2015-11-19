@@ -110,9 +110,7 @@ public class ZombieTest {
 
     	Human[] humansRound2 = {c,d};
     	zombie.search(humansRound2);
-    	// System.out.println(eatenVictims.length);
     	zombie.eat();
-    	// System.out.println(eatenVictims.length);
 
     	eatenVictims = zombie.stomachContents.get(zombie.name);
     	System.out.println("eaten two victims: " + eatenVictims.length);
