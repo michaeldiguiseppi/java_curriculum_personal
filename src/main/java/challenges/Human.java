@@ -4,7 +4,7 @@ public class Human implements Person{
 
 	String name, plea;
 	int age;
-	boolean eaten;
+	private boolean eaten;
 
   public Human(String name, int age){
   	this.name = name;
@@ -19,6 +19,14 @@ public class Human implements Person{
   	this.eaten = false;
   }
 
+  public void eatenSetter(boolean isEaten){
+  	this.eaten = isEaten;
+  }
+
+	public boolean eatenGetter(){
+		return this.eaten;
+	}
+
   @Override
   public boolean isDead(){
 		if(this.eaten == true){
@@ -26,4 +34,5 @@ public class Human implements Person{
 		}
 		return false;
 	}
+
 }

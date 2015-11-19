@@ -21,6 +21,8 @@ By the end of this unit, you should be able to:
 1. Write simple type casting
 1. Write/consume interfaces (Describe polymorphism/abstraction)
 
+As you go through the exercise, try and note the similarities and differences between Java and JavaScript. That'll help you develop a more well-rounded understanding of what language should be used when.
+
 # Zombie Apocalypse
 
 ![Zombie Apocalypse](http://vignette2.wikia.nocookie.net/zombie/images/4/41/Zombiegroup02.jpg/revision/latest?cb=20100111201702)
@@ -33,7 +35,7 @@ My worst nightmare has come true-- Zombies are taking over the world! Turns out,
 
 Start by forking and cloning this repo.
 
-You should see a folder called `src`, which contains a `main` folder and a `test` folder. The former contains the code you will be implementing and the former contains the test file you'll be checking your work against. Explore both folders. 
+You should see a folder named `src`, which contains a `main` folder and a `test` folder. The former contains the code you will be implementing and the latter contains the test file you'll be checking your work against. Explore both folders on your own. 
 
 Let's go over the `ZombieTest.java` file first.
 
@@ -45,10 +47,11 @@ public void createZombie_ShouldHaveName() {
 }
 ```
 
-You'll see that each test starts with an `@Test` suffix. Each test is a method whose name gives a good hint as to what should happen if the test method is executed successfully. For example, `createZombie_ShouldHaveName()` means that once you create a Zombie, it is expected that that Zombie has a name. The `assertEquals()` method takes two parameters, testing to see if they're the same with the following syntax: `assertEquals([message,] expected, actual)`.
+You'll see that the tests start with an `@Test` suffix. Each test is a method whose name gives a good hint as to what should happen if the test method is executed successfully. For example, `createZombie_ShouldHaveName()` means that once you instantiate a Zombie, it is expected that it will have a name. The validity of the test is measured with the `assertEquals()` method, which takes two parameters, testing to see if the parameters are the same, using the following syntax: `assertEquals(expected, actual)`.
 
 Now that we understand the tests, let's take a look at the various files in the main folder.
 
+You should find `Person.java`, `Zombie.java`, and `Human.java` files in the challenges folder. Take note of how they interact with each other. What do you think `Zombie implements Person` means? 
 
 
 

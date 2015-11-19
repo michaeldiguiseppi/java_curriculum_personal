@@ -45,7 +45,7 @@ public class Zombie implements Person{
 		String victimPlea = this.knownHumans[0].plea;
 
 		// youngest human is now dead :(
-		this.knownHumans[0].eaten = true;
+		this.knownHumans[0].eatenSetter(true);
 
 		// victim is now in the stomach of the zombie
 		// gross
