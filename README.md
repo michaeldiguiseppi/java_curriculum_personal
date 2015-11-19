@@ -53,8 +53,6 @@ Configure the gradle build daemon, for faster builds:
 touch ~/.gradle/gradle.properties && echo "org.gradle.daemon=true" >> ~/.gradle/gradle.properties
 ```
 
-## Running tests
-
 Run all tests with:
 
 ```
