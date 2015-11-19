@@ -29,13 +29,27 @@ My worst nightmare has come true-- Zombies are taking over the world! Turns out,
 
 **Your task:** Write a program that fulfills several tests developed by the CDC so we can keep track of the Zombies, identify their victims, and learn Java doing it! It's the only way we can end the carnage and reestablish peace. Get going!
 
-<!-- ### CDC's Instructions
+### CDC's Instructions
 
 Start by forking and cloning this repo.
 
 You should see a folder called `src`, which contains a `main` folder and a `test` folder. The former contains the code you will be implementing and the former contains the test file you'll be checking your work against. Explore both folders. 
 
-Let's go over the ZombieTest.java file first. You'll see that each test starts with an `@Test` annotation. Each test is a method whose name will e -->
+Let's go over the `ZombieTest.java` file first.
+
+```
+@Test
+public void createZombie_ShouldHaveName() {
+	Zombie zombie = new Zombie("Killer");
+    assertEquals("Killer", zombie.name);
+}
+```
+
+You'll see that each test starts with an `@Test` suffix. Each test is a method whose name gives a good hint as to what should happen if the test method is executed successfully. For example, `createZombie_ShouldHaveName()` means that once you create a Zombie, it is expected that that Zombie has a name. The `assertEquals()` method takes two parameters, testing to see if they're the same with the following syntax: `assertEquals([message,] expected, actual)`.
+
+Now that we understand the tests, let's take a look at the various files in the main folder.
+
+
 
 
 ### Running the Tests
