@@ -24,7 +24,9 @@ By the end of this unit, you should be able to:
 # Java Challenges
 ## Zombie Apocalypse
 
-OO and algorithm challenges in Java.
+![Zombie Apocalypse](http://vignette2.wikia.nocookie.net/zombie/images/4/41/Zombiegroup02.jpg/revision/latest?cb=20100111201702)
+
+<!-- OO and algorithm challenges in Java. -->
 
 ## Setup
 
