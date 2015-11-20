@@ -51,12 +51,33 @@ You'll see that the tests start with an `@Test` suffix. Each test is a method wh
 
 Now that we understand the tests, let's take a look at the various files in the main/java/challenges folder.
 
-You should find the `Person.java`, `Zombie.java`, and `Human.java` files in the challenges folder. Take note of how they interact with each other. What do you think `Zombie implements Person` means? 
+You should find the `Person.java`, `Zombie.java`, and `Human.java` files in the challenges folder. Take note of how they interact with each other. What do you think `Zombie implements Person` means?
+
+While the `Human.java` and `Zombie.java` files are classes, the `Person.java` file is an `interface`. This means that whatever class *implements* the interface will *inherit* the methods and variables created in that interface. The interesting thing about interfaces is that you can't actually instantiate any of the variables or methods. You will have to do that in the classes that implement the interface. This enables something called *abstraction*. 
+
+###### Example of abstraction: 
+
+As you're looking at the files, you should see that they all have at least one thing in common: an isDead() method. However, the two classes(Human and Zombie) also have an `@Override` suffix and some logic in the method. This is inheritance and abstraction at work. Human and Zombie *inherit* the method from the Person interface and define it in their own way. After all, Humans and Zombies are People, right? So, while the Zombie logic is written for you, you will have to write the logic to declare a Human dead. Hint: they're most likely dead if they've been eaten.
+
+Seems like we understand interfaces, inheritance, and abstraction. Let's move onto Constructors.
+
+In order to create/construct a Zombie, you will need to instantiate one. As you can see in the test file, this is done by using the `new` keyword. For Java to understand exactly what you're trying to create, you need to write a constructor method in your Zombie class. This has already been started for you:
+
+```
+public Zombie(String name){
+}
+
+public Zombie(String name, int health){
+}
+```
+Both of these methods are valid constructors and can be used simultaneously. 
 
 
 
 
 ### Running the Tests
+
+COMMENT OUT the tests that you're not working on. After completing one test and recieving a `BUILD SUCCESSFUL` message from gradle, uncomment the subsequent test, one at a time.  
 
 Make sure you have gradle installed:
 
