@@ -49,9 +49,10 @@ public void createZombie_ShouldHaveName() {
 
 You'll see that the tests start with an `@Test` suffix. Each test is a method whose name gives a good hint as to what should happen if the test method is executed successfully. For example, `createZombie_ShouldHaveName()` means that once you instantiate a Zombie, it is expected that it will have a name. The validity of the test is measured with the `assertEquals()` method, which takes two parameters, testing to see if the parameters are the same, using the following syntax: `assertEquals(expected, actual)`.
 
-Now that we understand the tests, let's take a look at the various files in the main folder.
+Now that we understand the tests, let's take a look at the various files in the main/java/challenges folder.
 
-You should find `Person.java`, `Zombie.java`, and `Human.java` files in the challenges folder. Take note of how they interact with each other. What do you think `Zombie implements Person` means? 
+You should find the `Person.java`, `Zombie.java`, and `Human.java` files in the challenges folder. Take note of how they interact with each other. What do you think `Zombie implements Person` means? 
+
 
 
 
@@ -70,7 +71,7 @@ Configure the gradle build daemon, for faster builds:
 touch ~/.gradle/gradle.properties && echo "org.gradle.daemon=true" >> ~/.gradle/gradle.properties
 ```
 
-Run all tests with:
+Run all tests from the root folder with:
 
 ```
 gradle test

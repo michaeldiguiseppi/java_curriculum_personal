@@ -1,5 +1,3 @@
-package challenges;
-
 public class Human implements Person{
 
 	String name, plea;
@@ -14,7 +12,7 @@ public class Human implements Person{
   }
 
 
-  // Override isDead() function from Person class
+  // Override isDead() function from Person interface
   @Override
   public boolean isDead(){
 	}

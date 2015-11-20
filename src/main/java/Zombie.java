@@ -1,4 +1,3 @@
-package challenges;
 import java.util.HashMap;
 
 public class Zombie implements Person{
@@ -16,7 +15,7 @@ public class Zombie implements Person{
 	public Zombie(String name, int health){
 	}
 
-  // Override isDead() function from Person class
+  // Override isDead() function from Person interface
 	@Override
 	public boolean isDead(){
 		return true;

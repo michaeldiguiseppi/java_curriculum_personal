@@ -1,5 +1,3 @@
-package challenges;
-
 public interface Person {
 
 	// String name;
