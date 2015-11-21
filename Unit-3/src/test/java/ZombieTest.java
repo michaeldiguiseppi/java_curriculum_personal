@@ -5,140 +5,132 @@ import static org.junit.Assert.assertEquals;
 
 public class ZombieTest {
 
-	// 1
-    @Test
-    public void createZombie_ShouldHaveName() {
-    	Zombie zombie = new Zombie("Killer");
-	    assertEquals("Killer", zombie.name);
-    }
+  @Test
+  public void createZombie_ShouldHaveName() {
+    Zombie zombie = new Zombie("Killer");
+    assertEquals("Killer", zombie.name);
+  }
 
-    // 2
-    // @Test
-    // public void search_ShouldReturnArrayOfHumans() {
-    // 	Zombie zombie = new Zombie("Runner");
+  // @Test
+  // public void search_ShouldReturnArrayOfHumans() {
+  //   Zombie zombie = new Zombie("Runner");
+  //
+  //   Human a = new Human("Brooks", 34);
+  //   Human b = new Human("Akyuna", 21);
+  //   Human c = new Human("Jeff", 36);
+  //   Human d = new Human("Fabio", 28);
+  //   Human e = new Human("Luke", 36);
+  //   Human[] humans = {a,b,c,d,e};
+  //
+  //   zombie.search(humans);
+  //
+  //   assertEquals("Fabio", zombie.knownHumans[1].name);
+  // }
 
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human c = new Human("Jeff", 36);
-    // 	Human d = new Human("Fabio", 28);
-    // 	Human e = new Human("Luke", 36);
-    // 	Human[] humans = {a,b,c,d,e};
+  // @Test
+  // public void search_ShouldFindYoungestHuman() {
 
-    // 	zombie.search(humans);
+  //   Zombie zombie = new Zombie("Runner");
 
-    // 	assertEquals("Fabio", zombie.knownHumans[1].name);
-    // }
+  //   Human a = new Human("Brooks", 34);
+  //   Human b = new Human("Akyuna", 21);
+  //   Human c = new Human("Jeff", 36);
+  //   Human d = new Human("Fabio", 28);
+  //   Human e = new Human("Luke", 36);
+  //   Human[] humans = {a,b,c,d,e};
 
-    // 3
-    // @Test
-    // public void search_ShouldFindYoungestHuman() {
+  //   zombie.search(humans);
 
-    // 	Zombie zombie = new Zombie("Runner");
+  //   assertEquals("Akyuna", zombie.knownHumans[0].name);
 
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human c = new Human("Jeff", 36);
-    // 	Human d = new Human("Fabio", 28);
-    // 	Human e = new Human("Luke", 36);
-    // 	Human[] humans = {a,b,c,d,e};
+  // }
 
-    // 	zombie.search(humans);
+  // @Test
+  // public void eat_ShouldEmptyArrayOfHumans() {
+  //   Zombie zombie = new Zombie("Eater");
 
-    // 	assertEquals("Akyuna", zombie.knownHumans[0].name);
+  //   Human a = new Human("Brooks", 34);
+  //   Human b = new Human("Akyuna", 21);
+  //   Human[] humans = {a,b};
 
-    // }
+  //   zombie.search(humans);
+  //   zombie.eat();
 
-    // 4
-    // @Test
-    // public void eat_ShouldEmptyArrayOfHumans() {
-    // 	Zombie zombie = new Zombie("Eater");
+  //   assertEquals(0, zombie.knownHumans.length);
+  // }
 
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human[] humans = {a,b};
+  // @Test
+  // public void eat_ShouldGainHealth() {
+  //   Zombie zombie = new Zombie("Eater", 2);
 
-    // 	zombie.search(humans);
-    // 	zombie.eat();
+  //   Human a = new Human("Brooks", 34);
+  //   Human b = new Human("Akyuna", 21);
+  //   Human[] humans = {a,b};
 
-    // 	assertEquals(0, zombie.knownHumans.length);
-    // }
+  //   zombie.search(humans);
+  //   zombie.eat();
 
-    // 5
-    // @Test
-    // public void eat_ShouldGainHealth() {
-    // 	Zombie zombie = new Zombie("Eater", 2);
+  //   assertEquals(3, zombie.health);
+  // }
 
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human[] humans = {a,b};
+  // @Test
+  // public void eat_ShouldHearVictimsPlea() {
+  //   Zombie zombie = new Zombie("Eater", 2);
 
-    // 	zombie.search(humans);
-    // 	zombie.eat();
+  //   Human a = new Human("Brooks", 34, "Help help help. Stop eating me.");
+  //   Human b = new Human("Akyuna", 21, "Oh God, why? How did my life come to this?");
+  //   Human[] humans = {a,b};
 
-    // 	assertEquals(3, zombie.health);
-    // }
+  //   zombie.search(humans);
 
-    // 6
-    // @Test
-    // public void eat_ShouldHearVictimsPlea() {
-    // 	Zombie zombie = new Zombie("Eater", 2);
+  //   assertEquals("Oh God, why? How did my life come to this?", zombie.eat());
 
-    // 	Human a = new Human("Brooks", 34, "Help help help. Stop eating me.");
-    // 	Human b = new Human("Akyuna", 21, "Oh God, why? How did my life come to this?");
-    // 	Human[] humans = {a,b};
+  // }
 
-    // 	zombie.search(humans);
+  // @Test
+  // public void eat_ShouldCollectContentsOfStomach() {
+  //   Zombie zombie = new Zombie("Chomper");
 
-    // 	assertEquals("Oh God, why? How did my life come to this?", zombie.eat());
+  //   Human a = new Human("Brooks", 34);
+  //   Human b = new Human("Akyuna", 21);
+  //   Human c = new Human("Jeff", 36);
+  //   Human d = new Human("Fabio", 28);
+  //   Human e = new Human("Luke", 36);
+  //   Human[] humans = {a,b};
 
-    // }
+  //   zombie.search(humans);
+  //   zombie.eat();
 
-    // 7
-    // @Test
-    // public void eat_ShouldCollectContentsOfStomach() {
-    // 	Zombie zombie = new Zombie("Chomper");
-    	
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human c = new Human("Jeff", 36);
-    // 	Human d = new Human("Fabio", 28);
-    // 	Human e = new Human("Luke", 36);
-    // 	Human[] humans = {a,b};
+  //   Human[] eatenVictims = zombie.stomachContents.get(zombie.name);
+  //   System.out.println("eaten one victim: " + eatenVictims.length);
 
-    // 	zombie.search(humans);
-    // 	zombie.eat();
+  //   assertEquals("Akyuna", eatenVictims[0].name);
 
-    // 	Human[] eatenVictims = zombie.stomachContents.get(zombie.name);
-    // 	System.out.println("eaten one victim: " + eatenVictims.length);
+  //   Human[] humansRound2 = {c,d};
+  //   zombie.search(humansRound2);
+  //   zombie.eat();
 
-    // 	assertEquals("Akyuna", eatenVictims[0].name);
+  //   eatenVictims = zombie.stomachContents.get(zombie.name);
+  //   System.out.println("eaten two victims: " + eatenVictims.length);
 
-    // 	Human[] humansRound2 = {c,d};
-    // 	zombie.search(humansRound2);
-    // 	zombie.eat();
+  //   assertEquals("Fabio", eatenVictims[1].name);
 
-    // 	eatenVictims = zombie.stomachContents.get(zombie.name);
-    // 	System.out.println("eaten two victims: " + eatenVictims.length);
-    	
-    // 	assertEquals("Fabio", eatenVictims[1].name);
+  // }
 
-    // }
+  // @Test
+  // public void isDead_ShouldClarifyIfHumanHasBeenEaten() {
+  //   Zombie zombie = new Zombie("Chomper");
 
-    // 8
-    // @Test
-    // public void isDead_ShouldClarifyIfHumanHasBeenEaten() {
-    // 	Zombie zombie = new Zombie("Chomper");
-    	
-    // 	Human a = new Human("Brooks", 34);
-    // 	Human b = new Human("Akyuna", 21);
-    // 	Human c = new Human("Jeff", 36);
-    // 	Human[] humans = {a,b,c};
+  //   Human a = new Human("Brooks", 34);
+  //   Human b = new Human("Akyuna", 21);
+  //   Human c = new Human("Jeff", 36);
+  //   Human[] humans = {a,b,c};
 
-    // 	zombie.search(humans);
-    // 	zombie.eat();
+  //   zombie.search(humans);
+  //   zombie.eat();
 
-    // 	assertEquals(true, b.isDead());
+  //   assertEquals(true, b.isDead());
 
-    // }
+  // }
 
 }
