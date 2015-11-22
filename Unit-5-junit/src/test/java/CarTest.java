@@ -27,28 +27,8 @@ public class CarTest {
     assertEquals(5, car.gallons);
   }
 
-  @Test
-  public void ShouldIncrementOdometerWhenDriving() {
-    Car car = new Car(10);
-    assertEquals(0, car.odometer);
+  // write the ShouldIncrementOdometerWhenDriving() test...
 
-    car.drive(50);
-    assertEquals(50, car.odometer);
-
-    car.drive(25);
-    assertEquals(75, car.odometer);
-  }
-
-  @Test
-  public void ShouldRecordTripsWhenDriving() {
-    Car car = new Car(10);
-    assertEquals(0, car.trips.size());
-
-    car.drive(50);
-    assertEquals("[50 miles]", car.trips.toString());
-
-    car.drive(25);
-    assertEquals("[50 miles, 25 miles]", car.trips.toString());
-  }
+  // write the ShouldRecordTripsWhenDriving() test...
 
 }
