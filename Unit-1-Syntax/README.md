@@ -105,6 +105,30 @@ class DoStuff {
 }
 ```
 
+## Java requires you to declare `void`
+
+In JavaScript, you can write methods that return values or not:
+
+```js
+function foo() {
+  return "bar"
+}
+
+function bar() {
+  console.log("something")
+} // returns undefined
+```
+
+In Java, in addition to specifying what type a method returns, you must also specify if a method doesn't return anything by adding the `void` keyword:
+
+```java
+class DoStuff {
+  void foo() {
+    System.out.println("something");
+  }
+}
+```
+
 ## Java uses types to declare variables
 
 In JavaScript you declare variables with `var x = 0;`
