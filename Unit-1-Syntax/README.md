@@ -2,6 +2,13 @@
 
 There are several differences between JavaScript and Java.  Here's a quick list of some of the main differences you'll run into as you get started.  This is by no means an exhaustive list, but should be enough to get you started.
 
+## Objectives
+
+By the end of this lesson you should be able to:
+
+- Convert basic JavaScript program to Java programs
+- Compile and run basic JavaScript programs
+
 ## Java is Compiled
 
 When you write in JavaScript, you can execute a `.js` file directly, like so:
@@ -20,6 +27,8 @@ So if your program is named `DoStuff`, you would run some variation of these two
 javac DoStuff.java
 java DoStuff
 ```
+
+After running `javac` list the contents of this directory.  What did `javac` create?
 
 ## Java requires a `main` method
 
@@ -282,11 +291,40 @@ class DoStuff {
 }
 ```
 
+## Java properties and method invocations
+
+In JavaScript, if you reference a function, but don't _invoke_ it with parenthesis, you just get a reference to the function:
+
+```js
+var foo = function(){};
+var bar = foo; // bar is a reference to the `foo` function
+bar();
+```
+
+In Java, if you call a method name without parenthesis, it will think it's a _field_.  Otherwise it'll blow up.
+
+```java
+class Car {
+  public int miles = 0;
+  public int miles() {
+    return 12;
+  }
+}
+
+Car car = new Car();
+car.miles; // 0
+car.miles(); // 12
+```
+
 ## Java has a simpler `this`
 
 In JavaScript, the `this` keyword is determined by a complex set of rules based on how the function was _invoked_.
 
 In Java, `this` is very simple - it always just refers to that _instance_.
+
+## Resources
+
+- http://www.open.ac.uk/StudentWeb/m874/!synterr.htm
 
 ## A quick comic strip
 
