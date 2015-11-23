@@ -6,8 +6,8 @@ There are several differences between JavaScript and Java.  Here's a quick list 
 
 By the end of this lesson you should be able to:
 
+- Compile and run basic Java programs
 - Convert basic JavaScript program to Java programs
-- Compile and run basic JavaScript programs
 
 ## Java is Compiled
 
@@ -30,6 +30,33 @@ java DoStuff
 
 After running `javac` list the contents of this directory.  What did `javac` create?
 
+## Java is statically typed
+
+In JavaScript, you don't have to tell the interpreter anything about what data _types_ exist in the program.  JavaScript just figures it out.  So you can write code like this:
+
+```js
+var foo = function (x, y) {
+  return x + y;
+}
+var var1 = foo(1, 2) // => 3
+var var2 = foo("hello", "world") // => helloworld
+```
+
+In Java, you need to explicitly specify the _type_ of the following:
+
+- variables
+- parameters of methods
+- return values of methods
+- Arrays, HashMaps etc...
+
+```java
+class DoStuff {
+  String foo(int x, int y) {
+    return
+  }
+}
+```
+
 ## Java requires a `main` method
 
 When you write in JavaScript, you can just put statements at the top-level in your program.  For example:
@@ -49,6 +76,20 @@ class DoStuff {
 ```
 
 When you compile this program and run `DoStuff`, Java will look for the `main` method of `DoStuff` and will run it.
+
+## Java uses `System.out.println` to print to the console
+
+In JavaScript this line:
+
+```js
+console.log("Foo")
+```
+
+Becomes:
+
+```java
+System.out.println("Hello World")
+```
 
 ## Java requires semicolons
 
@@ -76,33 +117,6 @@ class DoStuff {
     return x + y; // semicolons are required for every statement
   } // no semicolon required on method definitions
 } // no semicolon required on class declarations
-```
-
-## Java requires types
-
-In JavaScript, you don't have to tell the interpreter anything about what data _types_ exist in the program.  JavaScript just figures it out.  So you can write code like this:
-
-```js
-var foo = function (x, y) {
-  return x + y;
-}
-var var1 = foo(1, 2) // => 3
-var var2 = foo("hello", "world") // => helloworld
-```
-
-In Java, you need to explicitly specify the _type_ of the following:
-
-- variables
-- parameters of methods
-- return values of methods
-- Arrays, HashMaps etc...
-
-```java
-class DoStuff {
-  String foo(int x, int y) {
-    return
-  }
-}
 ```
 
 ## Java requires you to declare `void`
@@ -158,20 +172,6 @@ char bar = 'w';
 ```
 
 Using single / double quotes in the wrong place will cause a compile-time error.
-
-## Java uses `System.out` to print to the console
-
-In JavaScript this line:
-
-```js
-console.log("Foo")
-```
-
-Becomes:
-
-```java
-System.out.println("Hello World")
-```
 
 ## Java Arrays are more primitive
 
