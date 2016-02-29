@@ -1,24 +1,3 @@
-package galvanize;
-
-class Account {
-  public int balance = 0;
-}
-
-class Transfer {
-  Account sourceAccount;
-  Account destinationAccount;
-
-  Transfer(Account sourceAccount, Account destinationAccount) {
-    this.sourceAccount = sourceAccount;
-    this.destinationAccount = destinationAccount;
-  }
-
-  void transfer(int amount) {
-    sourceAccount.balance -= amount;
-    destinationAccount.balance += amount;
-  }
-}
-
 class Encapsulation03 {
   public static void main(String[] args){
     Account sourceAccount = new Account();
