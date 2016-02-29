@@ -1,11 +1,11 @@
 package galvanize;
 
-class Proposal {
+public class Proposal {
   String name = "";
   private int allInFavor = 0;
 }
 
-class Encapsulation01 {
+public class Encapsulation01 {
   public static void main(String[] args){
     Proposal prop = new Proposal();
     prop.name = "Some thing";
