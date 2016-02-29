@@ -9,14 +9,19 @@ By the end of this unit, you should be able to:
 
 ## Visibility
 
-In order to understand Encapsulation, you must know about the concept of _visibility_.  Java allows you to define which classes, methods and variables are visible to which pieces of code.  The 2 main visibilites you should start out with are:
+In order to understand Encapsulation, you must know about the concept of _visibility_.  Java allows you to define which classes, methods and variables are visible to which pieces of code.  There are 3 key words that express the visibility of a method or field.
 
 - public
 - private
+- protected
 
 When a method / field is marked as `private`, only code _inside_ the class definition can see that method / field.
 
-You can set the visibility of methods / properties like so:
+Marking a method / field as `public` allows for code that is inside and outside the class definition to access that method / field.
+
+If a method / field is marked as `protected`, it can only be access by classes that extend / inherit to its class definition. This will be discuss in greater detail in the inheritance lesson.
+
+You can set the visibility of methods / fields like so:
 
 ```java
 private int count = 0;
@@ -26,10 +31,18 @@ public void increment(int num) {
 }
 ```
 
+Furthermore, any methods / fields that do not have an access modifier, as such:
+
+```java
+int count = 0;
+```
+
+Will be treated as if they where `public` methods / fields.
+
 To get familiar with visibility, run the following:
 
 ```
-javac -d bin Encapsulation01.java && java -cp bin galvanize.Encapsulation01
+javac -d bin Encapsulation01.java && java -cp bin Encapsulation01
 ```
 
 You should see the following error:
@@ -38,7 +51,15 @@ You should see the following error:
 error: allInFavor has private access in Proposal
 ```
 
-Fix the `Encapsulation01.java` file.
+### Exercise 1
+
+Fix the `Proposal.java` file so that visibility is properly implemented.
+
+### Exercise 2
+
+Add a new field to the `Proposal` class name `allAgainst`. In the `Encapsulation01` class, assign a value to the `allAgainst` field in the instantiated object, and print out that value.
+
+Add your changes to `Encapsulation01`.
 
 ## Private fields / public methods
 
@@ -68,6 +89,8 @@ public void setName(String name) {
 }
 ```
 
+### Exercise 3
+
 In the `Encapsulation02` example, the program accesses the `Proposal` object's fields directly.  Alter `Proposal` to have:
 
 - a private name field
@@ -75,8 +98,10 @@ In the `Encapsulation02` example, the program accesses the `Proposal` object's f
 - a public setter method that sets the name to whatever is passed in
 
 ```
-javac -d bin Encapsulation02.java && java -cp bin galvanize.Encapsulation02
+javac -d bin Encapsulation02.java && java -cp bin Encapsulation02
 ```
+
+### Exercise 4
 
 You don't always need strict getter and setter methods (`getThing`, `setThing`).  Instead you could implement methods that more naturally fit into your domain.  In `Encapsulation03`, the program accesses the public `balance` property directly.  Make the following changes to `Account`:
 
@@ -87,7 +112,7 @@ You don't always need strict getter and setter methods (`getThing`, `setThing`).
 - refactor the `main` method to work, now that you've made those changes
 
 ```
-javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin Encapsulation03
 ```
 
 ## Seeing it in action
@@ -99,6 +124,8 @@ In the previous example you saw an account.  The account had a `balance` field. 
 So now you want to store an internal array of transactions.  Then you want the concept of `balance` to be the sum of the transactions, not to be a field itself.
 
 If your program exposed the `balance` field to the world, when you make this change you might have to refactor hundreds or thousands of lines of code throughout your program.  But if you have a `balance()` method, you can change the _internal_ implementation and the outside world won't even know that it happened.
+
+### Exercise 5
 
 Refactor the `Encapsulation03` example such that:
 
@@ -112,7 +139,7 @@ Refactor the `Encapsulation03` example such that:
 Notice how even though you did some major surgery to that class, the code that _used_ that class didn't change at all.
 
 ```
-javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin Encapsulation03
 ```
 
 ## Resources
