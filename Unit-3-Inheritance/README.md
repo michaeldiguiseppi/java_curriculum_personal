@@ -34,21 +34,21 @@ Because Java has types, it can be very specific in how it chooses which method t
 The following are all _different method signatures_:
 
 ```java
-class Doer {
+public class Doer {
 
-  void doStuff() {
+  public void doStuff() {
     System.out.println("Version 1");
   }
 
-  void doStuff(String message) {
+  public void doStuff(String message) {
     System.out.println("Version 2");
   }
 
-  void doStuff(String message, boolean important) {
+  public void doStuff(String message, boolean important) {
     System.out.println("Version 3");
   }
 
-  void doStuff(boolean important, String message) {
+  public void doStuff(boolean important, String message) {
     System.out.println("Version 4");
   }
 
@@ -67,6 +67,8 @@ doer.doStuff("with a string");        // calls version 2
 doer.doStuff("with a string", true);  // calls version 3
 doer.doStuff(false, "with a string"); // calls version 4
 ```
+
+### Exercise 1
 
 Try it yourself.  Run the following file:
 
@@ -93,14 +95,18 @@ class Car extends Vehicle {
 
 In the example above, `Car` is a subclass of `Vehicle`.
 
+### Exercise 2
+
 Run the following code:
 
 ```
-javac -d bin Inheritance02.java && java -cp bin galvanize.Inheritance02
+javac -d bin Inheritance02.java && java -cp bin Inheritance02
 ```
 
 - alter `Manager` such that it is a subclass of `Employee`
 - remove the `status` field from `Manager` as well as the `getStatus` method and re-run
+
+---
 
 ## Method Overriding and `super.method`
 
@@ -136,13 +142,17 @@ class RunIt {
 
 Notice how calling the `smoker`'s `speak` method with just a string called the subclass's `speak` method.  That's because it matched the _method signature_ exactly.
 
+### Exercise 3
+
 Do it yourself:
 
 ```
-javac -d bin Inheritance03.java && java -cp bin galvanize.Inheritance03
+javac -d bin Inheritance03.java && java -cp bin Inheritance03
 ```
 
 In `Inheritance03` _override_ the `getStatus` method such that it prints "this manager is employed".
+
+---
 
 **Overridden methods can call the superclass method**
 
@@ -256,10 +266,12 @@ class SpecialOrder extends Order {
 SpecialOrder order = new SpecialOrder(2);
 ```
 
+### Exercise
+
 Do it yourself:
 
 ```
-javac -d bin Inheritance04.java && java -cp bin galvanize.Inheritance04
+javac -d bin Inheritance04.java && java -cp bin Inheritance04
 ```
 
 Update `Inheritance04` such that `Adder`, `Subtractor` and `Multiplier` all inherit from a class named `Calculator` and all have a constructor that calls `super` appropriately.
