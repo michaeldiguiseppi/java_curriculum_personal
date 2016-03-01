@@ -1,3 +1,7 @@
+package galvanize;
+
+import encapsulation01_lib.Proposal;
+
 public class Encapsulation01 {
   public static void main(String[] args){
     Proposal prop = new Proposal();

@@ -82,7 +82,7 @@ There are other ways to achieve polymorphism, such as Interfaces.
 Run the following command:
 
 ```
-javac -d bin Polymorphism01.java && java -cp bin galvanize.Polymorphism01
+javac -d bin Polymorphism01.java && java -cp bin Polymorphism01
 ```
 
 Now make all classes inherit from a common abstract base class, and remove the `instanceof` / `if` statements.

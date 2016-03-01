@@ -42,7 +42,7 @@ Will be treated as if they where `public` methods / fields.
 To get familiar with visibility, run the following:
 
 ```
-javac -d bin Encapsulation01.java && java -cp bin Encapsulation01
+javac -d bin Encapsulation01.java && java -cp bin galvanize.Encapsulation01
 ```
 
 You should see the following error:
@@ -98,7 +98,7 @@ In the `Encapsulation02` example, the program accesses the `Proposal` object's f
 - a public setter method that sets the name to whatever is passed in
 
 ```
-javac -d bin Encapsulation02.java && java -cp bin Encapsulation02
+javac -d bin Encapsulation02.java && java -cp bin galvanize.Encapsulation02
 ```
 
 ### Exercise 4
@@ -112,7 +112,7 @@ You don't always need strict getter and setter methods (`getThing`, `setThing`).
 - refactor the `main` method to work, now that you've made those changes
 
 ```
-javac -d bin Encapsulation03.java && java -cp bin Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
 ```
 
 ## Seeing it in action
@@ -139,9 +139,10 @@ Refactor the `Encapsulation03` example such that:
 Notice how even though you did some major surgery to that class, the code that _used_ that class didn't change at all.
 
 ```
-javac -d bin Encapsulation03.java && java -cp bin Encapsulation03
+javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
 ```
 
 ## Resources
 
 - https://docs.oracle.com/javase/tutorial/java/concepts/index.html
+- https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html

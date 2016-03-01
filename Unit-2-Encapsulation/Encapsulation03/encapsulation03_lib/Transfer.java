@@ -1,13 +1,15 @@
+package encapsulation03_lib;
+
 public class Transfer {
   Account sourceAccount;
   Account destinationAccount;
 
-  Transfer(Account sourceAccount, Account destinationAccount) {
+  public Transfer(Account sourceAccount, Account destinationAccount) {
     this.sourceAccount = sourceAccount;
     this.destinationAccount = destinationAccount;
   }
 
-  void transfer(int amount) {
+  public void transfer(int amount) {
     sourceAccount.balance -= amount;
     destinationAccount.balance += amount;
   }
