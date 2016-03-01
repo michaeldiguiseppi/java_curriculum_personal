@@ -326,7 +326,7 @@ public class Person {
 
   // the `fullName` method is added inside the class definition
   // NOTE that you do not need `this` here
-  String fullName() {
+  public String fullName() {
     return first + " " + last;
   }
 
@@ -379,6 +379,20 @@ In Java:
 - you cannot define new fields at runtime, like you can with JavaScript objects
 - methods are defined inside the class definition
 - you don't need `this` unless there's parameter shadowing happening
+
+## Static
+
+Notice how we don't use **static** anymore inside our class. Static functions and variables can be used without instantiating (creating) the object from the class. On the other hand non-static variables and methods are only accessible from an instantiated object.
+
+
+This can be illustrated using the example above:
+
+```
+Person.fullName(); // error, fullName is not a static method
+
+Person mike = new Person("Michael", "Jordan");
+mike.fullName(); //works because mike is an instantiated object
+```
 
 ## Java has a simpler `this`
 
