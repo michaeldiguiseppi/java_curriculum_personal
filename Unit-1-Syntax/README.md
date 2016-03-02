@@ -494,6 +494,8 @@ You might have had more trouble than you expected, that is because there are a f
 **We Now Know:**
   - Classes are blueprints for objects.
   - Classes can be used as types.
+  - Constructors are named the same as the class.
+  - Constructor definitions do not have a return return type.
   - Objects are instantiated / created by invoking the constructor.
 
 ## Static vs. Instance
