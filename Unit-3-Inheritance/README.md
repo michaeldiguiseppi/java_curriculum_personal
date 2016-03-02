@@ -266,7 +266,7 @@ class SpecialOrder extends Order {
 SpecialOrder order = new SpecialOrder(2);
 ```
 
-### Exercise
+### Exercise 4
 
 Do it yourself:
 
