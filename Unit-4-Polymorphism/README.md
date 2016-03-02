@@ -77,6 +77,8 @@ Inheritance is one way to _achieve_ polymorphism, if and only if
 
 There are other ways to achieve polymorphism, such as Interfaces.
 
+
+### Exercise 1
 **Do it yourself**
 
 Run the following command:
