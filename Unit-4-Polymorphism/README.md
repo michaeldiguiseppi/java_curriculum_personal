@@ -131,7 +131,9 @@ Run the following command:
 javac -d bin Polymorphism02.java && java -cp bin galvanize.Polymorphism02
 ```
 
-Now create a similar fix as you did to `Polymorphism02` but use an interface instead.
+### Exercise 2
+
+Now create a similar fix as you did to `Polymorphism01` but use an interface instead.
 
 ## When to use polymorphism
 
