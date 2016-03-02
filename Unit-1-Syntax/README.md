@@ -47,7 +47,7 @@ Okay - it takes a lot more to write a hello world in Java than Javascript. So no
 
 JavaScript code is initially **interpreted**. This is convenient because we can just send the code *as it is written* to a browser, the browser will read and execute the code line by line.
 
-**You Do:** We can use node to interpret our `hello.js`:
+**You Do:** Use node to interpret our `hello.js`:
 
 ```bash
 node hello.js
@@ -129,9 +129,9 @@ function main(args){
 **You Do:** Try playing around with the `main` method in your `Hello` class. See what happens when you try to print `1 + 1` or `"hello" + 555`. Try to print multiple lines.
 
 **We Now Know:**
-- Java code must be contained within a `class`.
-- A class may contain methods.
-- The `main` method is a special method that is executed when you run the class file with the `java` command.
+ - Java code must be contained within a `class`.
+ - A class may contain methods.
+ - The `main` method is a special method that is executed when you run the class file with the `java` command.
 
 So, we now understand what some of the code means, but there's still a lot left that hasn't been explained.
 
@@ -200,9 +200,9 @@ public class Ops {
 ```
 
 **You Do:** Add a method to `Ops.java` called `multiply`.
-  - It has 3 parameters that are all of type `int`.
-  - It returns a type `int`.
-  - Invoke and print `multiply` in the `main` method.
+ - It has 3 parameters that are all of type `int`.
+ - It returns a type `int`.
+ - Invoke and print `multiply` in the `main` method.
 
 **You Do:** Take a minute to figure out what `main` returns, write it down before reading ahead.
 
@@ -232,36 +232,30 @@ Here is a chart of the most commonly used primitive types:
   <tr>
     <th>Type</th>
     <th>Precision</th>
-    <th>Description</th>
     <th>Example</th>
   </tr>
   <tr>
-    <td>int & long</td>
+    <td>`int` & `long`</td>
     <td>natural numbers</td>
     <td>0, -10, 2, -2000, 10, 1</td>
   </tr>
   <tr>
-    <td>float & double</td>
+    <td>`float` & `double`</td>
     <td>floating point numbers</td>
     <td>3.14156f, -52f, 59957422.234234f</td>
   </tr>
   <tr>
-    <td>boolean</td>
+    <td>`boolean`</td>
     <td>binary logic</td>
     <td>true, false</td>
   </tr>
   <tr>
-    <td>boolean</td>
-    <td>binary logic</td>
-    <td>true, false</td>
-  </tr>
-  <tr>
-    <td>char</td>
+    <td>`char`</td>
     <td>A single Unicode character</td>
     <td>'a', 'b', 'c'</td>
   </tr>
   <tr>
-    <td>String (see note)</td>
+    <td>`String` (see note)</td>
     <td>A string of chars</td>
     <td>"abcdefg", "hello world", "i am immutable"</td>
   </tr>
@@ -323,8 +317,8 @@ public class Ops {
 When we declare a variable inside a method these are known as **local variables** and can only be used within that method.
 
 **You Do**: Convert the following Javascript function into Java and add it to `Ops.java`
-  - Test it in your `main` method.
-  - **Hint:** `i` seems like a local variable.
+ - Test it in your `main` method.
+ - **Hint:** `i` seems like a local variable.
 
 ```javascript
 function power(x){
@@ -337,8 +331,8 @@ function power(x){
 ```
 
 **We Now Know:**
-  - variables must have a type.
-  - variables declared inside of methods are known as local variables.
+ - variables must have a type.
+ - variables declared inside of methods are known as local variables.
 
 ## Classes
 
@@ -492,11 +486,11 @@ You might have had more trouble than you expected, that is because there are a f
 
 
 **We Now Know:**
-  - Classes are blueprints for objects.
-  - Classes can be used as types.
-  - Constructors are named the same as the class.
-  - Constructor definitions do not have a return return type.
-  - Objects are instantiated / created by invoking the constructor.
+ - Classes are blueprints for objects.
+ - Classes can be used as types.
+ - Constructors are named the same as the class.
+ - Constructor definitions do not have a return return type.
+ - Objects are instantiated / created by invoking the constructor.
 
 ## Static vs. Instance
 
@@ -579,15 +573,15 @@ public class DemoApp{
 
 Notice how both `User` and `Chewie` print "Vadar". This is because static fields belong to the class and not the object instances, so all object instances will share the same static variable.
 
-*You Do:* Describe when you would want a method or variable to be static (class fields) and when you would want it to be non-static (instance fields).
+**You Do:** Describe when you would want a method or variable to be static (class fields) and when you would want it to be non-static (instance fields).
 
-*We Now Know:*
-  - Static fields are attached to the class.
-  - Static fields can be used with out instantiating the class (without constructing an object.)
-  - Static fields are shared across all object instances constructed from the class.
-  - Static variables are known as Class variables.
-  - Instance fields are attached to the object instances constructed from the class.
-  - Instance fields are unique to each instance of the object.
+**We Now Know:**
+ - Static fields are attached to the class.
+ - Static fields can be used with out instantiating the class (without constructing an object.)
+ - Static fields are shared across all object instances constructed from the class.
+ - Static variables are known as Class variables.
+ - Instance fields are attached to the object instances constructed from the class.
+ - Instance fields are unique to each instance of the object.
 
 
 ## Java has a simpler `this`
@@ -772,15 +766,15 @@ System.out.println(fullNames[0][0]);
 ```
 
 **You Do:** Create a class called ArrayDemo with a main method.
-  - Create an array of ints with a length of 10.
-  - Create an array of Strings using literal syntax.
-    - It contains Strings "Han Solo", "Luke Skywalker", "R2D2"
+ - Create an array of ints with a length of 10.
+ - Create an array of Strings using literal syntax.
+  - It contains Strings "Han Solo", "Luke Skywalker", "R2D2"
 
-**You Now Know:**
-  - Java arrays do not have helper methods.
-  - Java arrays have a specified length.
-  - Java arrays may only contain a single type.
-  - Java array literal syntax uses curly braces.
+**We Now Know:**
+ - Java arrays do not have helper methods.
+ - Java arrays have a specified length.
+ - Java arrays may only contain a single type.
+ - Java array literal syntax uses curly braces.
 
 ## Resources
 
