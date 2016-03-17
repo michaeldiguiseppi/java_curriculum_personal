@@ -9,8 +9,8 @@ Since most of the similarities are self evident, let's write some code that high
 By the end of this lesson you should be able to:
 
 - Understand the differences between a statically typed language and a loosely typed language.
-- Compile and run basic Java programs
-- Convert basic JavaScript program to Java programs
+- Compile and run basic Java programs.
+- Convert basic JavaScript program to Java programs.
 
 ## Hello Java!
 
@@ -255,14 +255,14 @@ Here is a chart of the most commonly used primitive types:
     <td>'a', 'b', 'c'</td>
   </tr>
   <tr>
-    <td>`String` (see note)</td>
+    <td>`String`* (see note)</td>
     <td>A string of chars</td>
     <td>"abcdefg", "hello world", "i am immutable"</td>
   </tr>
 </table>
 
- - **notice:** `char`s are single-quoted while `String`s are double-quoted.
- - **notice:** `String`s are actually a reference type, but they have the behavior of a primitive type.
+ - **notice:** `char`s use single-quotes while `String`s use double-quotes.
+ - **notice:** `String`s are actually a reference type, but they have the behavior of a primitive type. We will discuss them more in depth later.
 
 **We Now Know:**
  - methods must have a return type.
@@ -684,7 +684,7 @@ public class Car {
 ```
 
 **You Do:** Write down the answer to the following question:
-  - If methods cannot be referenced, can Java have higher order functions (methods passed into methods)?
+  - If methods cannot be referenced can Functional Programming be achieved in Java?
 
 **We Now Know:**
   - Methods are not references.
@@ -707,7 +707,7 @@ In Java, Arrays are extremely primitive. They have no methods; only a `length` p
 
 Here the general syntax for how you would create an array:
 
-```
+```java
 <item type in array> [] <name> = new <item type in array> [ <max items in array> ];
 ```
 
@@ -736,7 +736,7 @@ System.out.println(names.length); // 4
 System.out.println(names); // [Ljava.lang.String;@7852e922
 ```
 
-NOTE: `System.out.println` is not _quite_ as nice as `console.log` is in JavaScript. See [here](http://stackoverflow.com/questions/409784/whats-the-simplest-way-to-print-a-java-array) for some ways to print arrays in a more useful way.
+ - **notice**: `System.out.println` is not _quite_ as nice as `console.log` is in JavaScript. See [here](http://stackoverflow.com/questions/409784/whats-the-simplest-way-to-print-a-java-array) for some ways to print arrays in a more useful way.
 
 Java arrays don't have much functionality built in. There are classes such as `ArrayList` that provide additional functionality.
 
@@ -776,9 +776,108 @@ System.out.println(fullNames[0][0]);
  - Java arrays may only contain a single type.
  - Java array literal syntax uses curly braces.
 
+## Java Strings
+
+
+There are two ways to create a String in Java:
+
+```java
+// literal syntax
+String strLiteral = "I'm a string literal.";
+
+// constructor syntax
+String strObj = new String("I'm a string object.");
+```
+
+That's very useful! Unfortunately, Java stores String literals and String objects differently.
+
+If several String literals have the same content, then they share a reference:
+
+```java
+// assign fooLiteral a reference to the memory location of String literal "String".
+String fooLiteral = "String";
+
+// assign barLiteral a reference to the same memory location that fooLiteral references.
+String barLiteral = "String";
+```
+
+If several String objects have the same content, then they have unique references.
+
+```java
+// assign fooObj a reference to the memory location of a new String "String".
+String fooObj = new String("String");
+
+// assign barObj a reference to the memory location of String "String".
+String barObj = new String("String");
+```
+
+This leads to some interesting consequences. When used on a reference type, `==` compares references not values:
+
+```java
+String fooLiteral = "String";
+String barLiteral = "String";
+
+// evaluates to true because fooLiteral and barLiteral have the same reference.
+System.out.println(fooLiteral == barLiteral); //true
+
+String fooObj = new String("String");
+String barObj = new String("String");
+
+// evaluates to false because fooObj and barObj do not have the same reference.
+System.out.println(fooObj == barObj); //false
+
+// evaulates to false because fooLiteral and fooObj do not have the same reference.
+System.out.println(fooLiteral == fooObj); //false
+```
+
+The lesson is **never use `==` to compare Strings values**.
+
+So how do you compare Strings without having to worry about whether or not it is a literal or object? Use the `equals()` or `equalsIgnoreCase()` methods.
+
+```java
+String fooLiteral = "String";
+String barLiteral = "String";
+String fooObj = new String("String");
+String barObj = new String("String");
+
+System.out.println(fooLiteral.equals(barLiteral)); //true
+System.out.println(fooObj.equals(barObj)); //true
+System.out.println(fooObj.equals(fooLiteral)); //true
+```
+
+Thankfully, Strings don't behave like references in most cases. This is because Strings are immutable in memory. So every time you 'change' a string, you are instead actually creating a new String. This means we don't have to worry about String literals sharing the same reference, updating one will not affect the others.
+
+```java
+// assign imImmutable to reference a new String.
+String imImmutable = "I'm immutable";
+
+// assign fooImmutable to same reference as imImmutable.
+String fooImmutable = "I'm immutable";
+
+// reassign imImmutable's reference to a new String.
+imImmutable = imImmutable + ", but it seems like I'm not.";
+
+System.out.println(imImmutable); //"I'm immutable, but it seems like I'm not."
+System.out.println(fooImmutable); //"I'm immutable"
+```
+
+**You Do:**
+
+**We Now Know:**
+ - Strings are reference types.
+ - String literals with the same content share a reference.
+ - String objects with the same content do not share a reference.
+ - Strings are immutable, so when we modify them we are actually just creating a new String.
+ - On reference types, `==` compares references.
+ - String method `equals` and `equalsIgnoreCase` compare values.
+ - When testing for equality, never use `==` and instead use `equals`.
+
+
 ## Resources
 
-- http://www.open.ac.uk/StudentWeb/m874/!synterr.htm
+- [Common Java Syntax Errors](http://www.open.ac.uk/StudentWeb/m874/!synterr.htm)
+- [Explanation On Java Strings](http://www3.ntu.edu.sg/home/ehchua/programming/java/j3d_string.html)
+- [Resource with Beginner to Advanced Topics](http://www3.ntu.edu.sg/home/ehchua/programming/index.html#Java)
 
 ## A quick comic strip
 
