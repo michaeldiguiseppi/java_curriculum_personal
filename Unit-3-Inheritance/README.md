@@ -29,7 +29,7 @@ A **method signature** is comprised of:
 - the types of parameters
 - the order of parameters
 
-Because Java has types, it can be very specific in how it chooses which method to call.  The concept of having different methods with the same is called _method overloading_.
+Because Java has types, it can be very specific in how it chooses which method to call.  The concept of having different methods with the same name is called _method overloading_.
 
 The following are all _different method signatures_:
 
