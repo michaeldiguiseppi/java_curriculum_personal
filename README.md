@@ -28,7 +28,8 @@ To confirm, run `gradle -version`. The computer should display `Gradle 2.XX`.
 - [Unit 2 - Encapsulation](./Unit-2-Encapsulation)
 - [Unit 3 - Inheritance](./Unit-3-Inheritance)
 - [Unit 4 - Polymorphism](./Unit-4-Polymorphism)
-- [Unit 5 - junit and Gradle](./Unit-5-junit)
+- [Unit 5 - JUnit and Gradle](./Unit-5-junit)
+- [Project - Electronic Life](https://github.com/gSchool/java_electronic_life)
 
 
 ### References
