@@ -862,6 +862,7 @@ System.out.println(fooImmutable); //"I'm immutable"
 ```
 
 **You Do:**
+ - Write at least one sentence explaining how to compare strings for equality and why the traditional comparison operator should not be used.
 
 **We Now Know:**
  - Strings are reference types.
