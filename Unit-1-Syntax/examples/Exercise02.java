@@ -23,6 +23,13 @@ You'll have to:
 public class Exercise02 {
 
   // write your method here
+  public static int sumArray(int[] nums) {
+    int total = 0;
+    for (int i=0; i<nums.length; i++) {
+      total = total + nums[i];
+    }
+    return total;
+  }
 
   public static void main(String[] args) {
     Exercise02 instance = new Exercise02();

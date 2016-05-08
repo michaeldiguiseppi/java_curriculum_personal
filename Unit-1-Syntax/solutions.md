@@ -1,4 +1,14 @@
-The sum function looks like this:
+Exercise01:
+
+```java
+public class Exercise01 {
+  public static void main(String[] args) {
+    System.out.println("Hello, my name is Michael!");
+  }
+}
+```
+
+Exercise02:
 
 ```java
 int sumArray(int[] input) {

@@ -1,8 +1,8 @@
 # From JavaScript to Java
 
-Upon first glance, Java and Javascript seem to be similar languages. Each contains the word java in their names and they both share a similar C style syntax. A deeper look reveals that this observation is incorrect; there are several distinctive differences between the languages.
+Upon first glance, Java and JavaScript seem to be similar languages. Each contains the word "Java" in their names and they both share a similar C-style syntax. A deeper look reveals that this observation is incorrect; there are several distinctive differences between the languages.
 
-Since most of the similarities are self evident, let's write some code that highlights the differences while leveraging the similarities. This way we can begin to understand Java having only learned Javascript.
+Since most of the similarities are self evident, let's write some code that highlights the differences while leveraging the similarities. This way we can begin to understand Java having only learned JavaScript.
 
 ## Objectives
 
@@ -14,7 +14,7 @@ By the end of this lesson you should be able to:
 
 ## Hello Java!
 
-In Javascript, a hello world can be expressed in a single expression:
+In JavaScript, a hello world can be expressed in a single expression:
 
 ```javascript
 // filename: hello.js
@@ -41,17 +41,17 @@ public class Hello {
  - Tip: You are here to learn and become a strong developer, instead of copying and pasting the provided code type it up.
  - Notice: the filename's first character is capitalized. This is a Java convention for naming files.
 
-Okay - it takes a lot more to write a hello world in Java than Javascript. So now that we have a '.java' file, how do we run it?
+Okay - it takes a lot more to write a hello world in Java than JavaScript. So now that we have a '.java' file, how do we run it?
 
 ## Java is Compiled
 
-JavaScript code is initially **interpreted**. This is convenient because we can just send the code *as it is written* to a browser, the browser will read and execute the code line by line.
+JavaScript code is initially **interpreted**. This is convenient because we can just send the code *as it is written* to a browser - the browser will read and execute the code line by line.
 
 **You Do:** Use node to interpret our `hello.js`:
 
 ```bash
 node hello.js
-// prints: Hello, Javascript!
+// prints: Hello, JavaScript!
 ```
 
 Java works a bit different. Java code is **compiled** to **bytecode**. Bytecode is a set of instructions that a machine can understand. We can then use the Java Virtual Machine (JVM) to **execute** the compiled bytecode. This is really nice, because we can run our Java code anywhere we can have a JVM.
@@ -75,9 +75,9 @@ java Hello
 You should now see our lovely output of `Hello, Java!`. Good work.
 
 **We Now Know:**
- - Java is compiled to bytecode, a type of machine readable code.
+ - Java is compiled to bytecode - a type of machine readable code.
  - The Java Virtual Machine (JVM) executes the bytecode.
- - Javascript is interpreted, the JS engine reads and executes the code line by line as it is written.
+ - JavaScript is interpreted - the JS engine reads and executes the code line by line as it is written.
 
 Now that we can compile and run Java, what the hell does all this code mean?
 
@@ -99,28 +99,29 @@ public class Hello {
 In Java, all code must be wrapped within a **class**. An example class definition would look like this: `public class ClassName`. We'll talk more about what a class is, and why they can be useful later on. So in our `Hello.java` we define our class with this line of code:
 
 ```java
-// define a class that is named Hello
+// define a class named Hello
 public class Hello {
-// … other stuff …
+// ... other stuff ...
 }
 ```
 
 A class can contain **methods**, in this case we have a method named `main`.
+
 ```java
-//define a method called main
-//it expects a parameter called args
+// define a method called main
+// it expects a parameter called args
 public static void main(String [] args){
-//… method body goes here
+// ... method body goes here ...
 }
 ```
 
-we can compare this to the equivalent Javascript:
+We can compare this to the equivalent JavaScript:
 
 ```javascript
 // define a function called main
 // it may take a parameter called args
 function main(args){
-    //..function body goes here
+    // ... function body goes here ...
 }
 ```
 
@@ -135,26 +136,25 @@ function main(args){
 
 So, we now understand what some of the code means, but there's still a lot left that hasn't been explained.
 
-
 ## Types and Methods
 
 JavaScript is **dynamically typed**,  you don't have to tell the interpreter anything about which data _types_ exist, which _type_ a variable contains or which _type_ a function is going to return.  JavaScript just figures it out automatically. So you can write code like this:
 
 ```javascript
 function add(x, y) {
-  return x + y;
+    return x + y;
 };
 
 var resultOne = add(1, 2) // => 3
 var resultTwo = add('hello', 'world') // => helloworld
 ```
 
-Java is **statically typed**, meaning you need to explicitly specify the _type_ of the following:
+Java is **statically typed**, meaning you need to explicitly specify the _type_s of the following:
 
 - variables
 - parameters of methods
 - return values of methods
-- Arrays, HashMaps etc…
+- Arrays, HashMaps etc...
 
 In addition, once a variable has been declared its type cannot be changed.
 
@@ -165,7 +165,7 @@ Let's show an example, I want to declare a method named `sum` that returns an `i
 public static int sum ( /* params go here */ )
 ```
 
-Now to take it one step further, I want it to to have a parameter named x that is a type `int` and a parameter named y that is type `int`:
+Now to take it one step further, I want it to have a parameter named x that is a type `int` and a parameter named y that is type `int`:
 
 ```java
 // define a method called sum that returns an int
@@ -220,7 +220,7 @@ In Java, we must specify that a method does not return anything by setting the r
 
 ```java
 public static void main(String [] args ){
-  //...
+  // ...
 }
 ```
 
@@ -270,17 +270,17 @@ Here is a chart of the most commonly used primitive types:
  - variables must have a type.
  - parameters must have a type.
 
-Things are starting to come together now! We've written our own method, we could take our applications a lot further if we knew how to use variables…
+Things are starting to come together now! We've written our own method, but we could take our applications a lot further if we knew how to use variables...
 
 ## Variables
 
-Javascript makes variable declarations are fairly straightforward,
+JavaScript makes variable declarations fairly straightforward:
 
 ```javascript
-var myVar = 'Javascript variables are easy!';
+var myVar = 'JavaScript variables are easy!';
 ```
 
-Instead of using **var** or **let** in Java we put what **type** we would like to use,
+Instead of using **var** or **let**, in Java we put what **type** we would like to use,
 
 ```java
 //filename: Ops.java
@@ -316,7 +316,7 @@ public class Ops {
 
 When we declare a variable inside a method these are known as **local variables** and can only be used within that method.
 
-**You Do**: Convert the following Javascript function into Java and add it to `Ops.java`
+**You Do**: Convert the following JavaScript function into Java and add it to `Ops.java`
  - Test it in your `main` method.
  - **Hint:** `i` seems like a local variable.
 
@@ -336,9 +336,9 @@ function power(x){
 
 ## Classes
 
-In Javascript, when we want to create a reusable Object we create a **prototype**, and then we invoke the constructor to get a usable object.
+In JavaScript, when we want to create a reusable Object we create a **prototype**, and then we invoke the constructor to get a usable object:
 
-```js
+```javascript
 // create constructor for Person
 function Person(first, last) {
   // create fields first and last
@@ -370,7 +370,7 @@ public class Person {
   public String last;
 
   // Constructor Method.
-  // We invoke this using the new keyword instantiate an object.
+  // We invoke this using the new keyword to instantiate an object.
   // It does not need a return type.
   public Person(String first, String last) {
     // since the instance variable `first`
@@ -438,7 +438,7 @@ public String fullName() {
 
 **You Do:** Reread the `Person` class example now that some of the parts have been explained.
 
-**You Do:** Recreate the following Javascript object using Java:
+**You Do:** Recreate the following JavaScript object using Java:
 
 ```javascript
 function Rect(width, length){
@@ -489,7 +489,7 @@ You might have had more trouble than you expected, that is because there are a f
  - Classes are blueprints for objects.
  - Classes can be used as types.
  - Constructors are named the same as the class.
- - Constructor definitions do not have a return return type.
+ - Constructor definitions do not have a return type.
  - Objects are instantiated / created by invoking the constructor.
 
 ## Static vs. Instance
@@ -507,7 +507,7 @@ if( Math.random() < 0.5 ){
 }
 ```
 
-Static variables can also be useful, these are known as **Class Variables**. Class variables are like instance variables, but instead are static.
+Static variables can also be useful. These are known as **Class Variables**. Class variables are like instance variables, but instead are static.
 
 ```java
 //filename: PageCount.java
@@ -518,18 +518,18 @@ public class PageCount{
 
 }
 
-//filename: MyApp.java
-public class DemoApp{
+//filename: PageCountDemoApp.java
+public class PageCountDemoApp{
 
   public static void main(String[] args){
 
-    System.out.print('PageCount starting value: ');
+    System.out.print("PageCount starting value: ");
     System.out.println(PageCount.count);
 
     PageCount.count++;
     PageCount.count++;
 
-    System.out.print('PageCount ending value: ');
+    System.out.print("PageCount ending value: ");
     System.out.println(PageCount.count);
   }
 
@@ -550,8 +550,8 @@ public class User{
 
 }
 
-//filename: DemoApp.java
-public class DemoApp{
+//filename: UserDemoApp.java
+public class UserDemoApp{
 
   public static void main(String[] args){
 
@@ -610,7 +610,7 @@ demoObject.printOther();
 In Java, `this` is very simple - it always just refers to that _instance_.
 
 ```java
-//filename: DemoApp.java
+//filename: DemoObject.java
 public class DemoObject {
 
   public int foo;
@@ -644,25 +644,25 @@ public class DemoObject {
 }
 ```
 
-**You Do:** Think of one instance where you battled `this` in Javascript.
+**You Do:** Think of one instance where you battled `this` in JavaScript.
 
 That won't happen in Java.
 
 **We Now Know:**
   - `this` is predictable and consistent in Java.
-  - `this` always refers the object instance.
+  - `this` always refers to the object instance.
 
 ## Java properties and method invocations
 
 In JavaScript, a function is a reference. If you reference a function, but don't _invoke_ it with parenthesis, you just get a reference to the function:
 
-```js
+```javascript
 var foo = function(){};
 var bar = foo; // bar is a reference to the `foo` function
 bar();
 ```
 
-In Java, a method is a field that cannot be referenced, only invoked. If you call a method name without parenthesis, it will think it is a _variable_. This allows us to have variables that share the same name as a method, Java will differentiate:
+In Java, a method is a field that cannot be referenced, only invoked. If you call a method name without parenthesis, it will think it is a _variable_. This allows us to have variables that share the same name as a method. In other words, Java will differentiate `miles` from `miles()`:
 
 ```java
 public class Car {
@@ -695,7 +695,7 @@ public class Car {
 
 In JavaScript, Arrays are objects. You can add as many properties (indices) as you want, and you can put whatever you want into them, like so:
 
-```js
+```javascript
 var a = []
 a.push("a string")
 a.push(1)
@@ -742,7 +742,7 @@ Java arrays don't have much functionality built in. There are classes such as `A
 
 In JavaScript you can create new arrays using literal syntax like so:
 
-```js
+```javascript
 var names = ["Su", "Will"];
 
 var fullNames = [
@@ -777,7 +777,6 @@ System.out.println(fullNames[0][0]);
  - Java array literal syntax uses curly braces.
 
 ## Java Strings
-
 
 There are two ways to create a String in Java:
 
@@ -845,7 +844,7 @@ System.out.println(fooObj.equals(barObj)); //true
 System.out.println(fooObj.equals(fooLiteral)); //true
 ```
 
-Thankfully, Strings don't behave like references in most cases. This is because Strings are immutable in memory. So every time you 'change' a string, you are instead actually creating a new String. This means we don't have to worry about String literals sharing the same reference, updating one will not affect the others.
+Thankfully, Strings don't behave like references in most cases. This is because Strings are immutable in memory. So every time you 'change' a string, you are instead actually creating a new String. This means we don't have to worry about String literals sharing the same reference, updating one will not affect the other(s).
 
 ```java
 // assign imImmutable to reference a new String.
@@ -872,7 +871,6 @@ System.out.println(fooImmutable); //"I'm immutable"
  - On reference types, `==` compares references.
  - String method `equals` and `equalsIgnoreCase` compare values.
  - When testing for equality, never use `==` and instead use `equals`.
-
 
 ## Resources
 

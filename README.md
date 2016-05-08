@@ -24,7 +24,7 @@ To confirm, run `gradle -version`. The computer should display `Gradle 2.XX`.
 
 ## Progression
 
-- [Unit 1 - Java for Javascript Developers](./Unit-1-Syntax)
+- [Unit 1 - Java for JavaScript Developers](./Unit-1-Syntax)
 - [Unit 2 - Encapsulation](./Unit-2-Encapsulation)
 - [Unit 3 - Inheritance](./Unit-3-Inheritance)
 - [Unit 4 - Polymorphism](./Unit-4-Polymorphism)
