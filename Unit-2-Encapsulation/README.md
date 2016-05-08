@@ -19,7 +19,7 @@ When a method / field is marked as `private`, only code _inside_ the class defin
 
 Marking a method / field as `public` allows for code that is inside and outside the class definition to access that method / field.
 
-If a method / field is marked as `protected`, it can only be access by classes that extend / inherit to its class definition. This will be discuss in greater detail in the inheritance lesson.
+If a method / field is marked as `protected`, it can only be accessed by classes that extend / inherit to its class definition. This will be discussed in greater detail in the inheritance lesson.
 
 You can set the visibility of methods / fields like so:
 
@@ -31,17 +31,18 @@ public void increment(int num) {
 }
 ```
 
-Furthermore, any methods / fields that do not have an access modifier, as such:
+Furthermore, any methods / fields that do not have an access modifier, as such-
 
 ```java
 int count = 0;
 ```
 
-Will be treated as if they where `public` methods / fields.
+-will be treated as if they where `private` methods / fields.
 
-To get familiar with visibility, run the following:
+To get familiar with visibility, navigate to the following directory and then run:
 
 ```
+cd Unit-2-Encapsulation/problems/Encapsulation01
 javac -d bin Encapsulation01.java && java -cp bin galvanize.Encapsulation01
 ```
 
@@ -97,6 +98,12 @@ In the `Encapsulation02` example, the program accesses the `Proposal` object's f
 - a public getter method that returns the name
 - a public setter method that sets the name to whatever is passed in
 
+Then update the `Encapsulation02` class to:
+
+- print out value of the name field using the getter
+- update the value using the setter
+- print out the value again
+
 ```
 javac -d bin Encapsulation02.java && java -cp bin galvanize.Encapsulation02
 ```
@@ -109,7 +116,7 @@ You don't always need strict getter and setter methods (`getThing`, `setThing`).
 - create a `balance()` method that returns the balance
 - create a `deposit()` method that takes an int and adds money to the balance
 - create a `withdraw()` method that takes an int removes that much from the balance
-- refactor the `main` method to work, now that you've made those changes
+- refactor the `main` method and the `Transfer` class to work, now that you've made those changes
 
 ```
 javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
