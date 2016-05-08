@@ -73,6 +73,7 @@ doer.doStuff(false, "with a string"); // calls version 4
 Try it yourself.  Run the following file:
 
 ```
+cd Unit-3-Inheritance/problems/Inheritance01
 javac -d bin Inheritance01.java && java -cp bin galvanize.Inheritance01
 ```
 
@@ -100,13 +101,13 @@ In the example above, `Car` is a subclass of `Vehicle`.
 Run the following code:
 
 ```
-javac -d bin Inheritance02.java && java -cp bin Inheritance02
+javac -d bin Inheritance02.java && java -cp bin galvanize.Inheritance02
 ```
+
+Then:
 
 - alter `Manager` such that it is a subclass of `Employee`
 - remove the `status` field from `Manager` as well as the `getStatus` method and re-run
-
----
 
 ## Method Overriding and `super.method`
 
@@ -140,14 +141,14 @@ class RunIt {
 }
 ```
 
-Notice how calling the `smoker`'s `speak` method with just a string called the subclass's `speak` method.  That's because it matched the _method signature_ exactly.
+Notice how calling the `smoker`'s `speak` method with just a string called the subclass' `speak` method.  That's because it matched the _method signature_ exactly.
 
 ### Exercise 3
 
 Do it yourself:
 
 ```
-javac -d bin Inheritance03.java && java -cp bin Inheritance03
+javac -d bin Inheritance03.java && java -cp bin galvanize.Inheritance03
 ```
 
 In `Inheritance03` _override_ the `getStatus` method such that it prints "this manager is employed".
@@ -249,7 +250,7 @@ class SpecialOrder extends Order {
 SpecialOrder order = new SpecialOrder(2);
 ```
 
-Instead, you need to define a Constructor with like so:
+Instead, you need to define a Constructor like so:
 
 ```java
 class Order {
@@ -271,7 +272,7 @@ SpecialOrder order = new SpecialOrder(2);
 Do it yourself:
 
 ```
-javac -d bin Inheritance04.java && java -cp bin Inheritance04
+javac -d bin Inheritance04.java && java -cp bin galvanize.Inheritance04
 ```
 
 Update `Inheritance04` such that `Adder`, `Subtractor` and `Multiplier` all inherit from a class named `Calculator` and all have a constructor that calls `super` appropriately.
@@ -283,8 +284,8 @@ Lets say you have a `Customer` class that inherits from a `Person` class.
 When you run the following code `Customer bob = new Customer('Bob', '123 Main St')`, the JVM will do the following:
 
 - Find the `Customer` class
-- Finds a constructor on `Customer` that matches the _method signature_ `String, String`
-- Calls all of the appropriate superclass constructors based on how what's in the `Customer` constructor
+- Find a constructor on `Customer` that matches the _method signature_ `String, String`
+- Call all of the appropriate superclass constructors based on what's in the `Customer` constructor
 
 So the same concepts of method _overloading_ apply to constructors.
 
