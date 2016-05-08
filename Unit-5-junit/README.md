@@ -1,4 +1,4 @@
-# Overview
+# JUnit and Gradle
 
 ## Objectives
 
@@ -13,7 +13,7 @@ By the end of this unit, you should be able to:
 
 ## Running the Tests
 
-COMMENT OUT the tests that you're not working on. After completing one test and receiving a `BUILD SUCCESSFUL` message from gradle, uncomment the subsequent test, one at a time.  
+COMMENT OUT the tests that you're not working on. After completing one test and receiving a `BUILD SUCCESSFUL` message from gradle, uncomment the subsequent test, one at a time.
 
 Make sure you have gradle installed:
 
@@ -44,7 +44,7 @@ gradle test
 
 ![Zombie Apocalypse](http://vignette2.wikia.nocookie.net/zombie/images/4/41/Zombiegroup02.jpg/revision/latest?cb=20100111201702)
 
-My worst nightmare has come true-- Zombies are taking over the world! Turns out, Galvanize students are the only ones who can help. Good thing we've got a bunch of those.
+My worst nightmare has come true - Zombies are taking over the world! Turns out, Galvanize students are the only ones who can help. Good thing we've got a bunch of those.
 
 **Your task:** Write a program that fulfills several tests developed by the CDC so we can keep track of the Zombies, identify their victims, and learn Java doing it! It's the only way we can end the carnage and reestablish peace. Get going!
 
@@ -57,7 +57,7 @@ Let's go over the `ZombieTest.java` file first.
 ```java
 @Test
 public void createZombie_ShouldHaveName() {
-	Zombie zombie = new Zombie("Killer");
+  Zombie zombie = new Zombie("Killer");
     assertEquals("Killer", zombie.name);
 }
 ```
