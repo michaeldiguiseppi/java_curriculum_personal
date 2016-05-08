@@ -1,16 +1,16 @@
-# Classical Object Oriented Programming
+# Polymorphism
 
 ## Objectives
 
 By the end of this unit, you should be able to:
 
-- Describe and give examples polymorphism
+- Describe and give examples of polymorphism
 - Implement polymorphism using subclasses
 - Implement polymorphism using interfaces
 
 ## Abstract Classes
 
-In order to understand Polymorphism, it's helpful to understand the Abstract classes.  Abstract classes are classes that can define fields and methods, but cannot be instantiated.  You can define Abstract classes like so:
+In order to understand Polymorphism, it's helpful to understand Abstract classes.  Abstract classes are classes that can define fields and methods, but cannot be instantiated.  You can define Abstract classes like so:
 
 ```java
 abstract class Importer {
@@ -27,12 +27,12 @@ class JSONImporter extends Importer {
 
 ## Polymorphism and Inheritance
 
-Polymorphism is a power software design principle.  Polymorphism is a _way of programming_, not an explicit language feature.  You can program polymorphic code in either a Functional style or an Object-Oriented style.  You can write polymorphic code in statically typed or dynamically typed languages.
+Polymorphism is a powerful software design principle.  Polymorphism is a _way of programming_, not an explicit language feature.  You can program polymorphic code in either a Functional style or an Object-Oriented style.  You can write polymorphic code in statically typed or dynamically typed languages.
 
 Polymorphism consists of two parts:
 
-- A method or statement that can works with objects of _different types_
-- A number of different _types_ that methods with the same _method signature_
+- A method or statement that can work with objects of _different types_
+- A number of different _types_ of methods with the same _method signature_
 
 Polymorphism describes a way for a single statement to call the same method on multiple different instances.  Here's an example:
 
@@ -77,19 +77,20 @@ Inheritance is one way to _achieve_ polymorphism, if and only if
 
 There are other ways to achieve polymorphism, such as Interfaces.
 
-
 ### Exercise 1
+
 **Do it yourself**
 
 Run the following command:
 
 ```
-javac -d bin Polymorphism01.java && java -cp bin Polymorphism01
+cd unit-4-Polymorphism/problems/Polymorphism01
+javac -d bin Polymorphism01.java && java -cp bin galvanize.Polymorphism01
 ```
 
 Now make all classes inherit from a common abstract base class, and remove the `instanceof` / `if` statements.
 
-NOTE: `import` is a keyword, so if try to use `import` as a method name, it will raise a cryptic syntax error.
+NOTE: `import` is a keyword, so if you try to use `import` as a method name, it will raise a cryptic syntax error.
 
 ## Polymorphism and Interfaces
 
