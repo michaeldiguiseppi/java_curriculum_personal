@@ -1,4 +1,4 @@
-# Classical Object Oriented Programming
+# Inheritence
 
 ## Objectives
 
