@@ -322,7 +322,7 @@ When we declare a variable inside a method these are known as **local variables*
 
 ```javascript
 function power(x){
-  int y = 2;
+  var y = 2;
   for(var i = 0; i < y; i++){
       x = x * x;
   }
