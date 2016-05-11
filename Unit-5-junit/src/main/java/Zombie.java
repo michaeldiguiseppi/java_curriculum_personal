@@ -15,14 +15,6 @@ public class Zombie implements Person{
 	 * The humans he has come across.
 	 */
 	private HashMap<String, ArrayList<Human>> humans;
-	/**
-	 * The pleas of the victims.
-	 */
-	private ArrayList<String> victimPleas;
-	/**
-	 * What is this even?
-	 */
-	private ArrayList<Human> stomachContents = new ArrayList<>();
 
 	/**
 	 * Constructor, initializes the zombie with a name as well as our ArrayLists and HashMaps
