@@ -16,7 +16,7 @@ Later, we'll use Gradle which is a build tool for compiling Java applications an
 ## Setting Up a Java Development Environment
 
 1. Install [Java8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
-Under "Java SE Development Kit 8u74", click the link beside Mac OS X 64 to download the correct package.
+Under "Java SE Development Kit 8u92", click the link beside Mac OS X 64 to download the correct package.
 To confirm, run `java -version`. The computer should display `java version "1.8.0_XX"`.
 1. Install [Gradle](http://www.gradle.org/) using `brew update` then `brew install gradle`.
 To confirm, run `gradle -version`. The computer should display `Gradle 2.XX`.
