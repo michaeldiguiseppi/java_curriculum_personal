@@ -24,7 +24,7 @@ public class Zombie implements Person{
      */
 	public Zombie(String name){
         // Set the name here.
-        
+        this.name = name;
         humans = new HashMap<>();
         humans.put("known", new ArrayList<>());
         humans.put("lastEaten", new ArrayList<>());
@@ -38,6 +38,7 @@ public class Zombie implements Person{
 	public Zombie(String name, int health) {
         this(name); // This sets the name by calling the constructor above.
         // Set the health here
+        this.health = health;
 	}
 
     /**
@@ -46,6 +47,9 @@ public class Zombie implements Person{
      */
     public void search(Human[] humans) {
         // Add humans to "known" ArrayList here.
+        for (Human human : humans) {
+            this.humans.get("known").add(human);
+        }
 
         this.humans.get("known").sort(new Comparator<Human>() {
             @Override
@@ -60,7 +64,18 @@ public class Zombie implements Person{
      * humans HashMap
      */
     public void eat() {
+        this.digest();
+        while (!humans.get("known").isEmpty()) {
+            humans.get("lastEaten").add(humans.get("known").get(0));
+            humans.get("known").get(0).setEaten(true);
+            humans.get("known").remove(0);
+            this.health += 1;
 
+        }
+    }
+
+    private void digest() {
+        humans.get("lastEaten").clear();
     }
 
 	@Override
@@ -69,7 +84,7 @@ public class Zombie implements Person{
 	}
 
     public String getName() {
-        return name;
+        return this.name;
     }
     public HashMap<String, ArrayList<Human>> getHumans() {
         return this.humans;

@@ -23,6 +23,8 @@ public class Human implements Person {
      */
     public Human(String name, int age){
         // Set the instance name and age here.
+        this.name = name;
+        this.age = age;
     }
 
     /**
@@ -31,18 +33,19 @@ public class Human implements Person {
      * @param age the age of the human.
      * @param plea what the human says when the zombie eats them.
      */
-    public Human(String name, int age, String plea){
+    public Human(String name, int age, String plea) {
         this(name, age); // This calls the constructor above, so name and age are already set.
         // Set the plea here
+        this.plea = plea;
     }
 
     @Override
     public boolean isDead(){
-        return eaten;
+        return this.eaten;
 	}
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -50,7 +53,7 @@ public class Human implements Person {
     }
 
     public String getPlea() {
-        return plea;
+        return this.plea;
     }
 
     public void setPlea(String plea) {
@@ -58,7 +61,7 @@ public class Human implements Person {
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public void setAge(int age) {
@@ -66,7 +69,7 @@ public class Human implements Person {
     }
 
     public boolean isEaten() {
-        return eaten;
+        return this.eaten;
     }
 
     public void setEaten(boolean eaten) {
